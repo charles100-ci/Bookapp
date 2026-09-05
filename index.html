@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book++ — Documents scolaires</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">MPS Book<span>++</span></div>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#documents">Documents</a>
+      <a href="#matieres">Matières</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div>
+        <p class="badge">📚 Ressources scolaires</p>
+        <h1>Apprends, révise et télécharge tes PDF.</h1>
+        <p class="subtitle">Cours, exercices et sujets pour accompagner les élèves dans leurs révisions.</p>
+        <div class="search-box">
+          <input id="searchInput" type="search" placeholder="Rechercher un cours, exercice..." aria-label="Rechercher">
+          <button id="searchBtn">🔎 Rechercher</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="matieres">
+      <div class="section-title">
+        <h2>📖 Matières</h2>
+        <p>Choisis une matière pour filtrer les documents.</p>
+      </div>
+      <div class="subjects">
+        <button class="subject active" data-subject="Toutes">📚 Toutes</button>
+        <button class="subject" data-subject="Mathématiques">📐 Mathématiques</button>
+        <button class="subject" data-subject="Physique-Chimie">⚛️ Physique-Chimie</button>
+        <button class="subject" data-subject="SVT">🧬 SVT</button>
+        <button class="subject" data-subject="Anglais">🇬🇧 Anglais</button>
+      </div>
+    </section>
+
+    <section class="section" id="documents">
+      <div class="section-title">
+        <h2>📄 Documents disponibles</h2>
+        <p id="resultCount"></p>
+      </div>
+      <div id="documentsGrid" class="documents-grid"></div>
+      <p id="emptyState" class="empty" hidden>Aucun document ne correspond à ta recherche.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Book++ — Documents scolaires</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
